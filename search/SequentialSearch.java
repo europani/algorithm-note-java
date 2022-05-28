@@ -1,17 +1,26 @@
 package search;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.StringTokenizer;
 
 public class SequentialSearch {
 
-    static int N;
-    static int[] arr = {1, 2, 3, 4, 5};
-    static int target;
+    static int N, target;
+    static int[] arr;
 
+    static void input() throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        N = Integer.parseInt(br.readLine());
+        arr = new int[N];
 
-    static void input() {
-        Scanner scan = new Scanner(System.in);
-        target = scan.nextInt();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+        for (int i = 0; i < N; i++) {
+            arr[i] = Integer.parseInt(st.nextToken());
+        }
+
+        target = Integer.parseInt(br.readLine());
     }
 
     static int search() {
@@ -23,7 +32,7 @@ public class SequentialSearch {
         return -1;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         input();
         int result = search();
         if (result != -1) {
