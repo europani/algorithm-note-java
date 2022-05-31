@@ -9,6 +9,7 @@ import java.util.StringTokenizer;
 
 public class Dijkstra {
 
+    static final int INF = Integer.MAX_VALUE;
     static int N, M, start;
     static ArrayList<Edge>[] graph;
     static int[] distance;
@@ -23,7 +24,7 @@ public class Dijkstra {
 
         @Override
         public int compareTo(Edge o) {
-            return Integer.compare(this.weight, o.weight);
+            return this.weight - o.weight;
         }
     }
 
@@ -49,7 +50,7 @@ public class Dijkstra {
 
         distance = new int[N + 1];
         for (int i = 1; i <= N; i++) {
-            distance[i] = Integer.MAX_VALUE;
+            distance[i] = INF;
         }
     }
 
@@ -78,7 +79,7 @@ public class Dijkstra {
         dijkstra(start);
 
         for (int i = 1; i <= N; i++) {
-            if (distance[i] == Integer.MAX_VALUE) {
+            if (distance[i] == INF) {
                 System.out.println("INF");
             } else {
                 System.out.println(distance[i]);

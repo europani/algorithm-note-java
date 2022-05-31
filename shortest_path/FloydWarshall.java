@@ -9,10 +9,10 @@ import static java.lang.Math.min;
 
 public class FloydWarshall {
 
+    final static int INF = 100_000_000;
     static int N, M;
     static int[][] graph;
 
-    final static int INF = 100_000_000;
 
     static void input() throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

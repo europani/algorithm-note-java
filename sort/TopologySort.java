@@ -41,7 +41,7 @@ public class TopologySort {
 
         for (int i = 1; i < N+1; i++) {
             if (indegree[i]==0) {
-                queue.add(i);
+                queue.offer(i);
             }
         }
 
@@ -52,7 +52,7 @@ public class TopologySort {
             for (int i : graph[now]) {
                 indegree[i]--;
                 if (indegree[i] == 0) {
-                    queue.add(i);
+                    queue.offer(i);
                 }
             }
         }

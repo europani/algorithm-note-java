@@ -26,12 +26,7 @@ public class Kruskal {
 
         @Override
         public int compareTo(Edge o) {
-            if(this.cost < o.cost)
-                return -1;
-            else if(this.cost == o.cost)
-                return 0;
-            else
-                return 1;
+            return this.cost - o.cost;
         }
     }
 

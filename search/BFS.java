@@ -32,7 +32,7 @@ public class BFS {
 
     static void bfs(int start) {
         Queue<Integer> queue = new LinkedList<>();
-        queue.add(start);
+        queue.offer(start);
         visited[start] = true;
 
         while (!queue.isEmpty()) {
@@ -41,7 +41,7 @@ public class BFS {
 
             for (int x : graph[v]) {
                 if (!visited[x]) {
-                    queue.add(x);
+                    queue.offer(x);
                     visited[x] = true;
                 }
             }
