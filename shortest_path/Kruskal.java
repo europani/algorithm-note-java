@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/1197
 public class Kruskal {
 
     static int N, M, result;

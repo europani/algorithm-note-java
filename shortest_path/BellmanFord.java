@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/11657
 public class BellmanFord {
 
     static final int INF = Integer.MAX_VALUE;
@@ -15,12 +16,12 @@ public class BellmanFord {
     static int[] distance;
 
     static class Edge {
-        public int from, to, weight;
+        public int from, to, cost;
 
-        public Edge(int from, int to, int weight) {
+        public Edge(int from, int to, int cost) {
             this.from = from;
             this.to = to;
-            this.weight = weight;
+            this.cost = cost;
         }
     }
 
@@ -53,7 +54,7 @@ public class BellmanFord {
             for (Edge edge : graph) {
                 int cur = edge.from;
                 int next = edge.to;
-                int cost = edge.weight;
+                int cost = edge.cost;
 
                 if (distance[cur] != INF && distance[next] > distance[cur] + cost) {
                     distance[next] = distance[cur] + cost;

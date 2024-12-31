@@ -7,6 +7,7 @@ import java.util.StringTokenizer;
 
 import static java.lang.Math.min;
 
+// https://www.acmicpc.net/problem/11404
 public class FloydWarshall {
 
     final static int INF = 100_000_000;

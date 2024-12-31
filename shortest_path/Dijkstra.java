@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.PriorityQueue;
 import java.util.StringTokenizer;
 
+// https://www.acmicpc.net/problem/1753
 public class Dijkstra {
 
     static final int INF = Integer.MAX_VALUE;
@@ -37,7 +38,7 @@ public class Dijkstra {
 
         graph = new ArrayList[N + 1];
         for (int i = 1; i <= N; i++) {
-            graph[i] = new ArrayList<Edge>();
+            graph[i] = new ArrayList<>();
         }
         for (int i = 0; i < M; i++) {
             st = new StringTokenizer(br.readLine());
