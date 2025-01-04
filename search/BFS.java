@@ -5,6 +5,15 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
+/*
+7 6
+1 2
+1 3
+2 4
+2 5
+3 6
+3 7
+*/
 public class BFS {
 
     static int N, M;
