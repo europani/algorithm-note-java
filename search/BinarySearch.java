@@ -28,11 +28,10 @@ public class BinarySearch {
         if (arr[mid] == target) {
             return mid;
         } else if (arr[mid] > target) {
-            search(start, mid - 1);
+            return search(start, mid - 1);
         } else {
-            search(mid + 1, end);
+            return search(mid + 1, end);
         }
-        return -1;
     }
 
     public static void main(String[] args) {
