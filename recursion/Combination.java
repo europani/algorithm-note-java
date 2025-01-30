@@ -3,6 +3,16 @@ package recursion;
 import java.io.*;
 import java.util.StringTokenizer;
 
+/*
+N = 4, M = 2
+
+1 2
+1 3
+1 4
+2 3
+2 4
+3 4
+*/
 class Combination {
 
     static int N, M;

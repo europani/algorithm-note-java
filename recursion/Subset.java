@@ -4,31 +4,54 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.StringTokenizer;
-// 수정필요
+
+/*
+N = 4
+
+[
+[],
+[1],
+[1, 2],
+[1, 2, 3],
+[1, 2, 3, 4],
+[1, 2, 4],
+[1, 3],
+[1, 3, 4],
+[1, 4],
+[2],
+[2, 3],
+[2, 3, 4],
+[2, 4],
+[3],
+[3, 4],
+[4]
+]
+*/
 class Subset {
 
     static int N;
-    static List result = new ArrayList();
+    static List<List<Integer>> subsets = new ArrayList<>();
 
     static void input() {
         FastReader scan = new FastReader();
         N = scan.nextInt();
     }
 
-    static void dfs(int idx, List list) {
-        result.add(new ArrayList<>(list));
+    static void dfs(int idx, List<Integer> subList) {
+        subsets.add(new ArrayList(subList));        // 복사본 저장
 
         for (int i = idx+1; i <= N; i++) {
-            list.add(i);
-            dfs(i, list);
+            subList.add(i);
+            dfs(i, subList);
+            subList.remove(subList.size() - 1);
         }
     }
 
     public static void main(String[] args) {
         input();
-        dfs(0, new ArrayList());
+        dfs(0, new ArrayList<>());
 
-        System.out.println(result);
+        System.out.println(subsets);
     }
 
 

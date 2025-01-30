@@ -3,6 +3,22 @@ package recursion;
 import java.io.*;
 import java.util.StringTokenizer;
 
+/*
+N = 4, M = 2
+
+1 2
+1 3
+1 4
+2 1
+2 3
+2 4
+3 1
+3 2
+3 4
+4 1
+4 2
+4 3
+*/
 class Permutation {
 
     static int N, M;
@@ -32,7 +48,7 @@ class Permutation {
                 visited[i] = true;
                 arr[level] = i;
                 dfs(level + 1);
-                visited[i] = false;
+                visited[i] = false;     // backtracking
             }
         }
 
