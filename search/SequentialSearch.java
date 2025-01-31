@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/*
+Time Complexity: O(n)
+Space Complexity: O(1)
+*/
 public class SequentialSearch {
 
     static int N, target;

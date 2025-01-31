@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/*
+Time Complexity: O(nlogN)
+Space Complexity: O(logN)
+*/
 public class QuickSort {
     static int N;
     static int[] nums;

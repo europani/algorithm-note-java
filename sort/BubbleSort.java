@@ -5,6 +5,10 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.StringTokenizer;
 
+/*
+Time Complexity: O(n^2)
+Space Complexity: O(1)
+*/
 public class BubbleSort {
     static int N;
     static int[] nums;

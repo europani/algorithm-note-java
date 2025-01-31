@@ -2,6 +2,10 @@ package search;
 
 import java.util.Scanner;
 
+/*
+Time Complexity: O(logN)
+Space Complexity: O(1)
+*/
 public class BinarySearch {
 
     static int N, target;
@@ -19,19 +23,19 @@ public class BinarySearch {
     }
 
     static int search(int start, int end) {
-        if (start > end) {
-            return -1;
+        while (start <= end) {
+            int mid = (start + end) / 2;
+
+            if (arr[mid] == target) {
+                return mid;
+            } else if (arr[mid] > target) {
+                end = mid-1;
+            } else {
+                start = mid+1;
+            }
         }
 
-        int mid = (start + end) / 2;
-
-        if (arr[mid] == target) {
-            return mid;
-        } else if (arr[mid] > target) {
-            return search(start, mid - 1);
-        } else {
-            return search(mid + 1, end);
-        }
+        return -1;
     }
 
     public static void main(String[] args) {
