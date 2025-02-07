@@ -9,6 +9,10 @@ import java.util.Queue;
 import java.util.StringTokenizer;
 
 // https://www.acmicpc.net/problem/2252
+/*
+Time Complexity: O(V + E)
+Space Complexity: O(V + E)
+ */
 public class TopologySort {
 
     static int N, M;

@@ -6,6 +6,9 @@ import java.util.Queue;
 import java.util.Scanner;
 
 /*
+Time Complexity: O(V + E)
+Space Complexity: O(V + E)
+
 7 6
 1 2
 1 3
