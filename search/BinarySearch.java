@@ -24,7 +24,7 @@ public class BinarySearch {
 
     static int search(int start, int end) {
         while (start <= end) {
-            int mid = (start + end) / 2;
+            int mid = start + (end - start) / 2;        // = (start + end) / 2 (but, prevent overflow)
 
             if (arr[mid] == target) {
                 return mid;

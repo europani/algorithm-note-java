@@ -35,7 +35,7 @@ public class BinarySearch2D {
 
     static int[] search(int start, int end) {
         while (start <= end) {
-            int mid = (start + end) / 2;        // ex) 5
+            int mid = start + (end - start) / 2;        // ex) 5
             int midX = mid / M;                 // ex) 1
             int midY = mid % M;                 // ex) 1
 
