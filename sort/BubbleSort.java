@@ -26,12 +26,12 @@ public class BubbleSort {
 
     static void sort() {
         int tmp;
-        for (int i = 0; i < N; i++) {
-            for (int j = i+1; j < N; j++) {
-                if (nums[i] > nums[j]) {
-                    tmp = nums[i];
-                    nums[i] = nums[j];
-                    nums[j] = tmp;
+        for (int i = 0; i < N-1; i++) {
+            for (int j = 0; j < N-1-i; j++) {
+                if (nums[j] > nums[j+1]) {
+                    tmp = nums[j];
+                    nums[j] = nums[j+1];
+                    nums[j+1] = tmp;
                 }
             }
         }
