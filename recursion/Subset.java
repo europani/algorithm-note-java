@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /*
+Time Complexity: O(N * 2^N) - 가짓수 : 2^N, subList 복사비용 : N
+Space Complexity: O(N)
 N = 4
 
 [
