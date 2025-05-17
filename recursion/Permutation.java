@@ -4,6 +4,8 @@ import java.io.*;
 import java.util.StringTokenizer;
 
 /*
+Time Complexity: O(N * N!) - 가짓수 : N!, subList 복사비용 : N
+Space Complexity: O(N)
 N = 4, M = 2
 
 1 2
