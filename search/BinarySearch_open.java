@@ -6,7 +6,7 @@ import java.util.Scanner;
 Time Complexity: O(logN)
 Space Complexity: O(1)
 */
-public class BinarySearch {
+public class BinarySearch_open {
 
     static int N, target;
     static int[] arr;
@@ -22,14 +22,14 @@ public class BinarySearch {
         }
     }
 
-    static int search(int left, int right) {            // [left, right]
-        while (left <= right) {
+    static int search(int left, int right) {            // [left, right)
+        while (left < right) {
             int mid = left + (right - left) / 2;    // = (left + right) / 2 (but, prevent overflow)
 
             if (arr[mid] == target) {
                 return mid;
             } else if (arr[mid] > target) {
-                right = mid-1;                          // close쪽은 mid 불포함
+                right = mid;                            // open쪽은 mid 포함
             } else {
                 left = mid+1;                           // close쪽은 mid 불포함
             }
@@ -40,7 +40,7 @@ public class BinarySearch {
 
     public static void main(String[] args) {
         input();
-        int result = search(0, N - 1);          // [left, right] -> close
+        int result = search(0, N);                   // [left, right) -> open
 
         if (result != -1) {
             System.out.println(result + " 에서 발견");
